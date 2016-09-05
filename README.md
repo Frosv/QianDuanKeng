@@ -8,6 +8,7 @@
 1.
 
 > input
+
 > type='range'
 
 input标签的type属性为range的时候，对小数点会自动变成取整
@@ -17,6 +18,7 @@ input标签的type属性为range的时候，对小数点会自动变成取整
 1.
 
 > display:table-cell
+
 > vertical-align:middle
 
 display: table-cell;与float: left;存在冲突，float会导致display无法实现
@@ -24,6 +26,7 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 2.
 
 > display:table-cell
+
 > vertical-align:middle
 
 针对图片垂直居中问题，图片是个置换元素，有些特殊的特性。
@@ -51,6 +54,7 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 3.
 
 > display:table-cell
+
 > vertical-align:middle
 
 在遇到位置出问题的情况下，仔细看好上下文所设置的元素，特别是在图片的居中问题上，应该多往父元素去看css，因为很多时候可能是父元素的css问题。
