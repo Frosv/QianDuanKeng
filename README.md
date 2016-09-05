@@ -24,6 +24,8 @@ CSS
 .box img {
  vertical-align:middle;
 }
+3.在遇到位置出问题的情况下，仔细看好上下文所设置的元素，特别是在图片的居中问题上，应该多往父元素去看css，
+因为很多时候可能是父元素的css问题。
 
 <div class="box">
  <img src="" />
