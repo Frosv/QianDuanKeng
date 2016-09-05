@@ -65,7 +65,7 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 [base-48转换](http://c.runoob.com/front-end/59)
 
-有时候很多雪碧图可以将其转换成base-48来直接放入css样式里，这样就可以节省我们在background里去找文件引用
+有时候很多“雪碧图”可以将其转换成base-48来直接放入css样式里，这样就可以节省我们在background里去找文件引用
 
 ### JavaScript
 
