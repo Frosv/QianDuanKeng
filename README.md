@@ -1,7 +1,7 @@
 # Webbugfuck
 前端踩过的坑
 
-本文会将HTML，CSS，JavaScript中遇到的问题整理出来，每个标签或者用法都会整理到一起，使用的时候搜索标签或者API就能找到相关的BUG问题
+本文会将HTML，CSS，JavaScript中遇到的问题整理出来，每个标签、样式、API都会整理到一起，使用的时候搜索标签、样式、API就能找到相关的BUG问题
 
 ### HTML
 
