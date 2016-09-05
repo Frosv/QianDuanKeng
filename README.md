@@ -59,6 +59,14 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 在遇到位置出问题的情况下，仔细看好上下文所设置的元素，特别是在图片的居中问题上，应该多往父元素去看css，因为很多时候可能是父元素的css问题。
 
+4.
+
+> background 
+
+[base-48转换](http://c.runoob.com/front-end/59)
+
+有时候很多雪碧图可以将其转换成base-48来直接放入css样式里，这样就可以节省我们在background里去找文件引用
+
 ### JavaScript
 
 1.将功能封装，以便以后重复使用
