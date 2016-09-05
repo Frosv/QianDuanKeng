@@ -70,3 +70,11 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 ### JavaScript
 
 1.将功能封装，以便以后重复使用
+
+### Jquery
+
+1.
+
+> $()
+
+$(fuck.a,fuck.b)是找不到的，Jquery中的语法是在第二个中找第一个，正确的写法是$(fuck.a+','fuck.b)用逗号分隔开
