@@ -132,3 +132,57 @@ step over是在单步执行时，在函数内遇到子函数时不会进入子�
 step out就是但单步执行到子函数内时，用step out就可以执行完子函数余下部分，并返回到上一层函
 数。
 
+2.
+
+> jQuery插件
+
+> 插件初始化
+
+> 插件基本代码
+
+```JavaScript
+(function($) {
+  var pluginName = 'slide';//定义插件名字
+    var defaults = {//定义插件基础配置
+        slideBox:'slide-box'
+    }
+
+  function Plugin(element, options) {//插件初始化设置
+    this.options = $.extend({}, defaults, options); //后面覆盖前面
+
+    this.init();//开始初始化
+  }
+
+  Plugin.prototype.init = function() {//将初始化封装，功能都可通过此方法添加
+    console.log(this.options.slideBox);
+    this.onClick();
+  };
+
+  $.fn[pluginName] = function(options) {//插件对外接口
+    var args = Array.prototype.slice.call(arguments, 1);//获取字符串之后的参数
+    
+    //Array 表示JavaScript中的Array类
+    //prototype 表示调用Array的方法
+    //slice 表示
+    //call 表示
+
+    return this.each(function() {//回调，整个插件的开始
+      var $this = $(this),
+        data = $this.data('plugin_' + pluginName);
+
+      // Create a new instance.
+      if (!data) {
+        $this.data('plugin_' + pluginName, (data = new Plugin(this, options)));//关键点在new 开始实例化所传入的参数
+      }
+
+      // Make it possible to access methods from public.
+      // e.g `$element.rangeslider('method');`
+      if (typeof options === 'string') {
+        data[options].apply(data, args);
+      }
+    });
+  };
+
+})(jQuery);
+
+```
