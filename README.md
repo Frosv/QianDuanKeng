@@ -103,7 +103,9 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 ### JavaScript
 
-1.将功能封装，以便以后重复使用
+1.
+
+将功能封装，以便以后重复使用
 
 ### Jquery
 
@@ -113,7 +115,7 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 $(fuck.a,fuck.b)是找不到的，Jquery中的语法是在第二个中找第一个，正确的写法是$(fuck.a+','fuck.b)用逗号分隔开
 
-### 插件
+### 插件、封装
 
 1.
 
@@ -145,17 +147,27 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
   var pluginName = 'slide';//定义插件名字
     var defaults = {//定义插件基础配置
         slideBox:'slide-box'
-    }
+    };
 
   function Plugin(element, options) {//插件初始化设置
+    this.$window = $(window);
+    this.$document = $(document);
+    this.$element = $(element);
+  
     this.options = $.extend({}, defaults, options); //后面覆盖前面
+    
+    
+    //改变上下文，将function中的this指向全局this
+    this.nextEvent = $.proxy(this.nextEvent,this);
+    this.prevEvent = $.proxy(this.prevEvent,this);
+    this.showImg = $.proxy(this.showImg,this);
 
     this.init();//开始初始化
-  }
+  };
 
   Plugin.prototype.init = function() {//将初始化封装，功能都可通过此方法添加
     console.log(this.options.slideBox);
-    this.onClick();
+    this.onClick();//从这里开始调用其他功能
   };
 
   $.fn[pluginName] = function(options) {//插件对外接口
@@ -163,8 +175,11 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
     
     //Array 表示JavaScript中的Array类
     //prototype 表示调用Array的方法
-    //slice 表示
-    //call 表示
+    //slice 表示遍历从第几个开始
+    //call 表示是thisobeject的一个方法
+    //var args = Array.prototype.slice.call(arguments,1) 表示把调用方法的参数截取出来
+    //options = 'hide',1,2,3,4
+    //args = 1,2,3,4
 
     return this.each(function() {//回调，整个插件的开始
       var $this = $(this),
@@ -173,16 +188,18 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
       // Create a new instance.
       if (!data) {
         $this.data('plugin_' + pluginName, (data = new Plugin(this, options)));//关键点在new 开始实例化所传入的参数
-      }
+      };
 
       // Make it possible to access methods from public.
       // e.g `$element.rangeslider('method');`
       if (typeof options === 'string') {
         data[options].apply(data, args);
-      }
+      };
     });
   };
 
 })(jQuery);
+
+**这是个匿名函数，主意末尾的引号**
 
 ```
