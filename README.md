@@ -145,8 +145,7 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
 ```JavaScript
 (function($) {
   var pluginName = 'slide';//定义插件名字
-    var defaults = {//定义插件基础配置
-        slideBox:'slide-box'
+    var defaults = {//定义插件默认配置
     };
 
   function Plugin(element, options) {//插件初始化设置
@@ -155,6 +154,7 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
     this.$element = $(element);
   
     this.options = $.extend({}, defaults, options); //后面覆盖前面
+    //这里可以开始写自己需要把什么值传进来然后给其他的功能公用
     
     
     //改变上下文，将function中的this指向全局this
@@ -166,8 +166,13 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
   };
 
   Plugin.prototype.init = function() {//将初始化封装，功能都可通过此方法添加
-    console.log(this.options.slideBox);
-    this.onClick();//从这里开始调用其他功能
+     this.bindEvent();//从这里开始调用其他功能
+  };
+  
+  Plugin.prototype.onClick = function() {
+    //改变上下文，将function中的this指向全局this，proxy在需要的时候在用，不要在初始化的时候去使用
+    this.$element.on('click', next, $.proxy(this.nextEvent, this));
+    this.$element.on('click', perv, $.proxy(this.prevEvent, this));
   };
 
   $.fn[pluginName] = function(options) {//插件对外接口
@@ -200,6 +205,6 @@ step out就是但单步执行到子函数内时，用step out就可以执行完�
 
 })(jQuery);
 
-**这是个匿名函数，主意末尾的引号**
+**这是个匿名函数， 注意末尾的引号**
 
 ```
