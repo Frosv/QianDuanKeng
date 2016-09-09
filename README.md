@@ -115,6 +115,13 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 $(fuck.a,fuck.b)是找不到的，Jquery中的语法是在第二个中找第一个，正确的写法是$(fuck.a+','fuck.b)用逗号分隔开
 
+2.
+
+> $().prototype
+
+在我们不熟悉Jquery的选择器后有什么功能的情况下，我们可以使用prototype去打印查看里面所封装好的功能
+
+
 ### 插件、封装
 
 1.
