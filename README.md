@@ -103,10 +103,6 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 ### JavaScript
 
-1.
-
-将功能封装，以便以后重复使用
-
 ### Jquery
 
 1.
