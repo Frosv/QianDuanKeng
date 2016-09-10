@@ -103,6 +103,138 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 ### JavaScript
 
+针对JavaScript的api加上自己对其的理解，斜体为*用途*，粗体是**理解**
+
+### A-E
+
+> Math.abs(number)
+
+*返回数字的绝对值*
+
+**在计算的时候使用**
+
+> Math.acos(number)
+
+*返回数字的反余弦值*
+
+**在计算的时候使用**
+
+> strVariable.anchor(anchorString)
+
+*在对象中的指定文本两端放置一个有name属性的html锚点*
+
+**锚点这个感觉平时还没什么用途**
+
+> apply([thisObj],[argArray])
+
+*应用某一对象的一个方法，用另一个对象替换当前对象*
+
+**这个方法是很重要的，在写插件的时候经常会用到，将一个方法（function）应用到另一个对象（object）上**
+
+> Math.asin(number)
+
+*返回数字的反正弦值*
+
+**在计算的时候使用**
+
+> Math.atan(number)
+
+*返回数字的反正切值*
+
+**在计算的时候使用**
+
+> Math.atan2(y, x)
+
+*返回由 X 轴到 (y,x) 点的角度（以弧度为单位）*
+
+**在制作旋转之类的时候使用**
+
+> myEnum.atEnd()
+
+*返回一个 Boolean 值，指明枚举算子是否位于集合的末尾*
+
+**这个感觉目前没用到的地方**
+
+> strVariable.big( )
+
+*把 HTML <big> 标记放置在 String 对象中的文本两端*
+
+> strVariable.blink( )
+
+*把 HTML <blink> 标记放置在 String 对象中的文本两端*
+
+> strVariable.bold()
+
+*把 HTML <b> 标记放置在 String 对象中的文本两端*
+
+> call([thisObj,[arg]...)
+
+*调用一个对象的一个方法，以另一个对象替换当前对象*
+
+**call在插件制作中是一个非常重要的方法，将arguments取出然后传递**
+
+> Math.ceil(number)
+
+*返回大于等于其数字参数的最小整数*
+
+> strObj.charAt(index)
+
+*返回指定索引位置处的字符*
+
+>  strObj.charCodeAt(index)
+
+*返回一个整数，代表指定位置上字符的 Unicode 编码*
+
+> rgExp.compile(pattern, [flags])
+
+*把正则表达式编译为内部格式，从而执行得更快*
+
+> array1.concat(A,B)
+
+*返回一个新数组，这个新数组是由两个或更多数组组合而成的*
+
+**平时在结合数组的时候用到**
+
+> Math.cos(number)
+
+*返回数的余弦值*
+
+> decodeURI(URIstring)
+
+*返回一个已编码的统一资源标识符 (URI) 的非编码形式*
+
+> decodeURIComponent(encodedURIString)
+
+*返回统一资源标识符 (URI) 的一个已编码组件的非编码形式*
+
+> array.dimensions( ) 
+
+*返回 VBArray 的维数*
+
+> encodeURI(URIString)
+
+*将文本字符串编码为一个有效的统一资源标识符 (URI)*
+
+> encodeURIComponent(encodedURIString)
+
+*将文本字符串编码为一个统一资源标识符 (URI) 的一个有效组件*
+
+> escape(charString)
+
+*对 String 对象编码以便它们能在所有计算机上可读*
+
+> eval(codeString)
+
+*检查 JScript 代码并执行*
+
+> rgExp.exec(str)
+
+*用正则表达式模式在字符串中运行查找，并返回包含该查找结果的一个数组*
+
+> Math.exp(number)
+
+*返回 e（自然对数的底）的幂*
+
 ### Jquery
 
 1.
