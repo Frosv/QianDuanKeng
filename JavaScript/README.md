@@ -177,6 +177,8 @@
 
 *返回 String 对象内第一次出现子字符串的字符位置*
 
+**不只是可以返回出现的位置，还可以判断是否存在，"Blue Whale".indexOf("Blute");    // returns -1 ，还有区分大小写，"Blue Whale".indexOf("blue") // returns -1，判断是否存在"Blue Whale".indexOf("Blue") !== -1; // true**
+
 > isFinite(number)
 
 *返回一个 Boolean 值,指明所提供的数字是否是有限的*
