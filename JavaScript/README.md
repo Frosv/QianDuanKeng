@@ -52,6 +52,12 @@
 
 **这个感觉目前没用到的地方**
 
+> Boolean()
+
+*建立一个判断不存在null,false,undefined,0,"",NaN的返回值*
+
+**Boolean([1,2,3,'qsda',null,0,null]) // return 检测除去描述中的值配合filter()使用**
+
 > strVariable.big( )
 
 *把 HTML <big> 标记放置在 String 对象中的文本两端*
@@ -133,6 +139,10 @@
 *返回 e（自然对数的底）的幂*
 
 ### F-I
+
+> filter(callback[, thisArg])
+
+*使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组*
 
 > strVariable.fixed( )
 
@@ -298,3 +308,11 @@
 > dateObj.setDate(numDate)
 
 *设置Date对象中用本地时间表示的数字日期*
+
+### 函数
+
+> arguments
+
+*arguments 是一个类数组对象。代表传给一个function的参数列表*
+
+**arguments对象并不是一个真正的Array。它类似于数组，但没有数组所特有的属性和方法，除了 length。例如，它没有pop方法。使用:var args = Array.prototype.slice.call(arguments);转换成数组再使用数组的方法去使用，就是说arguments的type是object，我们转换成array来使用**
