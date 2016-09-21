@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3-3D旋转</title>
+</head>
+
+<body>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0px;
+  }
+
+  body {
+    background: #b1b1b1;
+    font-family: Arial;
+    font-size: 125%;
+    color: #202020;
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+    float: left;
+    width: 235px;
+    height: 220px;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+  }
+
+  #container {
+    position: relative;
+    height: 362px;
+    width: 282px;
+    margin: 0 auto;
+    top: 50px;
+    -webkit-perspective: 800px;
+    /*3d场景*/
+    -moz-perspective: 800px;
+  }
+
+  #container div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 242px;
+    height: 322px;
+    padding: 20px;
+    background: #463;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: 1.5s ease-in-out;
+    -moz-transition: 1.5s ease-in-out;
+    -ms-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+  }
+
+  #container div.lower {
+    font-family: verdana, arial, sans-serif;
+    background: #642;
+    background: -moz-linear-gradient(-45deg, #642, #864 50%, #642 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#642), color-stop(50%, #a86), color-stop(100%, #642));
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /*抖动*/
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+  }
+
+  #container div.lower h1 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    line-height: 40px;
+  }
+
+  #container div.lower p {
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    color: #eee;
+    line-height: 20px;
+  }
+
+  #container div.lower a {
+    color: #ff0;
+  }
+
+  #container div.upper {
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    background: -moz-linear-gradient(-45deg, #463, #8a7 50%, #463 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#463), color-stop(50%, #8a7), color-stop(100%, #463));
+  }
+
+  #container div.upper img {
+    border: 1px solid #fff;
+    width: 242px;
+  }
+
+  #container:hover div.lower {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+  }
+
+  #container:hover div.upper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+  </style>
+  <div id="container">
+    <div class="lower">
+      <h1>The Barn Owl</h1>
+      <p>汽车可以不买日货，但影像产品不买日本的还可以买哪里的？所以不是抵制日货，而是奋发自强，技术领先才行。所以各位要在自己的岗位上负责任的干好本职工作、推动祖国强大才是惩罚日本的核心所在。</p>
+      <p>Source <a href="/">Wikipedia</a></p>
+    </div>
+    <div class="upper">
+      <img src="http://www.codefans.net/jscss/demoimg/201208/owl.jpg" alt="Barn owl">
+    </div>
+  </div>
+</body>
+
+</html>
