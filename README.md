@@ -32,6 +32,10 @@
 [幻灯片](https://github.com/Frosv/Slide.js)
 [裁剪图片](制作中)
 
+### 参考资料
+
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+
 
 
 

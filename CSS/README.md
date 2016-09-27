@@ -58,3 +58,9 @@ display: table-cell;与float: left;存在冲突，float会导致display无法实
 
 记住 hex code 遵循 red-green-blue（红-绿-蓝），或称为 rgb 格式。hex code 中的前两位表示颜色中红色的数量，第三四位代表绿色的数量，第五六位代表蓝色的数量.
 
+2.
+
+rgba关于IE8兼容问题，写了rbga后加上：
+
+**filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);**
+
