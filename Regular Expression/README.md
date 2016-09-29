@@ -156,6 +156,19 @@
 
 **关于这个不知道为什么后面\1可以生效，不太明白这个的意思**
 
+> 美国号码
+
+/^1?\s?(\((\d){3}\)|(\d){3})((\-)?|(\s)?)(\d){3}((\-)?|(\s)?)(\d){4}$/
+
+555-555-5555
+(555)555-5555
+(555) 555-5555
+555 555 5555
+5555555555
+1 555 555 5555
+
+(题目出自)[https://www.freecodecamp.cn/challenges/validate-us-telephone-numbers#?solution=function%20telephoneCheck(str)%20%7B%0A%20%20%2F%2F%20Good%20luck!%0A%20%20return%20%2F%5E1%3F%5Cs%3F(%5C((%5Cd)%7B3%7D%5C)%7C(%5Cd)%7B3%7D)((%5C-)%3F%7C(%5Cs)%3F)(%5Cd)%7B3%7D((%5C-)%3F%7C(%5Cs)%3F)(%5Cd)%7B4%7D%24%2F.test(str)%3B%0A%7D%0A%0A%0A%0AtelephoneCheck(%221%20555%20555%205555%22)%3B%0A]
+
 
 
 
