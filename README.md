@@ -30,7 +30,7 @@
 **厚颜无耻求star**
 
 [幻灯片](https://github.com/Frosv/Slide.js)
-[裁剪图片](制作中)
+[裁剪图片](https://github.com/Frosv/ClipImage.js)
 
 ### 参考资料
 
