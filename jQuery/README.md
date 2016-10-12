@@ -244,6 +244,147 @@ $('*')
 
 ***
 
+> :has
+
+*匹配含有选择器所匹配的元素的元素*
+
+> :parent
+
+*匹配含有子元素或者文本的元素*
+
+> :hidden
+
+*匹配所有不可见元素*
+
+> :visible
+
+*匹配所有的可见元素*
+
+> [attribute]
+
+*匹配包含给定属性的元素*
+
+> :first-child
+
+*匹配第一个子元素*
+
+> :frist-of-type
+
+*查找作为父元素的span类型子元素中的"长子"的span标签*
+
+> :nth-child
+
+*匹配其父元素下的第N个子或者偶元素*
+
+> :only-child
+
+*匹配某元素是父元素中唯一的子元素*
+
+> :input  :checkbox :*
+
+*匹配各种标签或者type*
+
+***
+
+### AJAX
+
+> $.ajax(url,[settings])
+
+*通过HTTP请求加载远程数据*
+
+> load(url,[data],[callback])
+
+*载入远程HTML文件代码并插入至DOM中*
+
+> $.get(url,[data],[fn],[type])
+
+*通过远程HTTP GET请求载入信息*
+
+> $.getJSON(url,[data],[fn])
+
+*通过HTTP GET请求载入JSON数据*
+
+> $.getScript(url,[callback])
+
+*通过HTTP GET请求载入并执行一个JavaScript文件*
+
+> $.post(url,[data],[fn],[type])
+
+*通过远程HTTP POST 请求载入信息*
+
+> ajaxComplete(callback)
+
+*AJAX请求完成时执行函数(AJAX事件)*
+
+> ajaxError(callback)
+
+*AJAX请求发生错误时执行函数(AJAX事件)*
+
+> ajaxSend(callback)
+
+*AJAX请求发送前执行函数(AJAX事件)*
+
+> ajaxStart(callback)
+
+*AJAX请求开始执行时函数(AJAX事件)*
+
+> ajaxStop(callback)
+
+*AJAX请求结束执行时函数(AJAX事件)*
+
+> ajaxSuccess(callback)
+
+*AJAX请求成功执行时函数(AJAX事件)*
+
+### 属性
+
+> attr(name|pro|key,val|fn)
+
+*设置或返回被选元素的属性值*
+
+> removeAttr(name)
+
+*从每个匹配的元素中删除一个属性*
+
+> prop(name|properties|key,value|fn)
+
+*获取在匹配的元素集中的第一个元素的属性值*
+
+> removeProp(name)
+
+*用来删除由.prop方法设置的属性值*
+
+**在有些特定的属性上如果.attr()无法获取就要用.prop()来获取**
+
+> addClass(class|fn)
+
+*为每个匹配的元素添加制定的类名*
+
+> removeClass([class|fn])
+
+*从匹配的所有元素中删除全部或者制定的类*
+
+> toggleClass(class|fn[,sw])
+
+*如果存在(不存在)就删除(添加)一个类*
+
+**在制作一个点击变化的时候可以使用这个**
+
+> html([val|fn])
+
+*取得第一个匹配元素的html的内容*
+
+> text([val|fn])
+
+*取得所有匹配元素的内容*
+
+> val([val|fn|arr])
+
+*获得匹配元素的当前值*
+
+### CSS
+
+***
 
 1.
 
