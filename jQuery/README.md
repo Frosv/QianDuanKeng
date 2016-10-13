@@ -1,6 +1,6 @@
 ### Jquery
 
-针对JavaScript的api加上自己对其的理解，斜体为*用途*，粗体是**理解**
+针对JavaScript的api加上自己对其的理解,斜体为*用途*,粗体是**理解**
 
 ### 核心
 
@@ -36,13 +36,13 @@
 
 > index([selector|element])
 
-*搜索匹配元素，并返回相应元素的索引值，从0开始*
+*搜索匹配元素,并返回相应元素的索引值,从0开始*
 
 > data([key],[value])
 
 *在元素上存放或者读取数据*
 
-**data-是html5的一个新加入的属性，可以将自定义的data属性轻松获取，记得在html标签上定义的时候data-type-name，在js中获取就要写成data('dataName')，这是因为data支持驼峰式定义法**
+**data-是html5的一个新加入的属性,可以将自定义的data属性轻松获取,记得在html标签上定义的时候data-type-name,在js中获取就要写成data('dataName'),这是因为data支持驼峰式定义法**
 
 > removeData([name|list])
 
@@ -52,7 +52,7 @@
 
 *显示或者操作匹配元素上执行的函数队列*
 
-**迷之方法，不知道有什么用**
+**迷之方法,不知道有什么用**
 
  > dequeue([queueName])
 
@@ -74,13 +74,13 @@
 
 *扩展jQuery对象本身*
 
-**具体使用：this.options = $.extend({}, defaults(默认配置), options(传入配置));传入顺序是从后往前，后面的将会覆盖前面的默认配置，这样可以做到有默认属性可以在初始化的时候能使用**
+**具体使用：this.options = $.extend({}, defaults(默认配置), options(传入配置));传入顺序是从后往前,后面的将会覆盖前面的默认配置,这样可以做到有默认属性可以在初始化的时候能使用**
 
 > jQuery.noConflict([extreme])
 
 *运行这个函数将变量由$的控制权让渡给第一个实现它的库*
 
-**jQuery.noConflict()就是$不能使用，必须使用jQuery来作为开头**
+**jQuery.noConflict()就是$不能使用,必须使用jQuery来作为开头**
 
 ### 选择器
 
@@ -88,7 +88,7 @@
 
 *选择id*
 
-**使用任何的元字符（如 !"#$%&'()*+,./:;<=>?@[\]^`{|}~）作为名称的文本部分， 它必须被两个反斜杠转义：\\**
+**使用任何的元字符（如 !"#$%&'()*+,./:;<=>?@[\]^`{|}~）作为名称的文本部分, 它必须被两个反斜杠转义：\\**
 
 $('#fuckYou')
 
@@ -200,7 +200,7 @@ $('*')
 
 > :header
 
-*匹配如h1，h2等标题*
+*匹配如h1,h2等标题*
 
 ***
 
@@ -384,18 +384,249 @@ $('*')
 
 ### CSS
 
+> css(name|pro|[,val|fn])
+
+*访问匹配元素的样式属性*
+
+> $.cssHooks
+
+*给属性加上前缀*
+
+> offset([coordinates])
+
+*获取匹配元素在当前视口的相对偏移*
+
+> position()
+
+*获取匹配元素相对父元素的偏移*
+
+> scrollTop([val])
+
+*获取匹配元素相对滚动条顶部的偏移*
+
+> scrollTop([val])
+
+*获取匹配元素相对滚动条左侧的偏移*
+
+> height([val|fn])
+
+*取得匹配元素当前计算的高度值*
+
+**有些父元素在没设置高度值的时候也无法获取是因为你没清除浮动,clearfix**
+
+> width([val|fn])
+
+*取得第一个匹配元素当前计算的高度值*
+
+> innerHeight()
+
+*获取第一个匹配元素内部区域高度(包括补白,不包括边框)*
+
+> innerWidth()
+
+*获取第一个匹配元素内部区域宽度*
+
+> outerHeight([soptions])
+
+*获取第一个匹配元素外部高度(默认包括补白和边框)*
+
+> outerWidth([options])
+
+*获取匹配元素外部宽度*
+
+### 文档处理
+
+> append(content|fn)
+
+*向匹配元素内部追加内容*
+
+> appendTo(content)
+
+*将匹配元素追加到另一个制定的元素中*
+
+> prepend(content|fn)
+
+*向匹配元素内部前置追加内容*
+
+> prepend(content)
+
+*将匹配元素追加到另一个制定的元素中*
+
+> after(content|fn)
+
+*在匹配元素之后插入内容*
+
+> before(content|fn)
+
+*在匹配元素之前插入内容*
+
+> wrap(html|element|fn)
+
+*将匹配元素用其他元素的结构化标记包裹起来*
+
+> unwrap()
+
+*移除父元素*
+
+> replaceWith(content|fn)
+
+*将匹配元素替换成制定的HTML或DOM元素*
+
+> empty()
+
+*删除匹配元素集合中的所有子节点*
+
+> remove([expr])
+
+*从DOM中删除所有匹配的元素*
+
+> detach([expr])
+
+*与remove不同在于事件和数据都会保留*
+
+> clone([Even[,deepEven]])
+
+*克隆匹配的DOM元素并且选中这些克隆的副本*
+
+### 筛选
+
+> eq(index|-index)
+
+*获取匹配元素的第N个元素*
+
+> first()
+
+*获取第一个元素*
+
+> last()
+
+*获取最后一个元素*
+
+> hasClass(class)
+
+*检测当前元素是否含有特定的类*
+
+> filter(expr|obj|ele|fn)
+
+*筛选出与指定表达式匹配的元素集合*
+
+> is(expr|obj|ele|fn)
+
+*根据选择器、DOM元素或者JQ对象来检测匹配元素集合*
+
+> map(callback)
+
+*将一组元素转换成其他数组*
+
+> has(expr|ele)
+
+*保留包含特定后代的元素,去掉那些不含有指定后代的元素*
+
+> not(expr|ele|fn)
+
+*删除与指定表达式匹配的元素*
+
+> slice(start,[end])
+
+*选取一个匹配的子集*
+
+> children([expr])
+
+*获取子元素*
+
+> closest(expr|object|element)
+
+*从元素开始向上级元素匹配,并返回最先匹配到的元素*
+
+> find(expr|obj|ele)
+
+*搜索所有与指定表达式匹配的元素*
+
+> next([expr])
+
+*匹配元素的下一个元素*
+
+> nextAll([expr])
+
+*查找当前元素之后所有的同辈元素*
+
+> nextUntil([ele|fn])
+
+*查找当前元素之后所有的同辈元素，直到遇到匹配的那个元素为止*
+
+> offsetParent()
+
+*返回第一个匹配元素用于定位的父节点*
+
+> parent([expr])
+
+*获取元素的第一个父元素*
+
+> parents([expr])
+
+*获取所有匹配元素的祖先元素的合集*
+
+> parentsUntil([expr|element][,filter])
+
+*查找当前元素的所有的父辈元素，直到遇到匹配的元素为止*
+
+> prev([expr])
+
+*获取之前的同辈元素*
+
+> prevall([expr])
+
+*查找当前元素之前的所有同辈元素*
+
+> prevUntil([ele][,f])
+
+*查找当前元素之前所有同辈元素，直到遇到匹配的元素为止*
+
+> siblings([expr])
+
+*取得一个白喊匹配元素中的当下的子元素的同辈元素，子元素中的元素不匹配*
+
+> add[expr|ele|html|obj[,con]]
+
+*将匹配的元素添加在对象中*
+
+**根本版本不同有区别，用到再说**
+
+> addSelf()
+
+*加入先前所选的加入当前元素中*
+
+**1.8版本之后被标记为过时元素**
+
+> addBack()
+
+*添加堆栈中元素集合到当前集合，一个选择性的过滤选择器*
+
+> contents()
+
+*查找匹配元素内部所有的子节点(包括文本节点)*
+
+> end()
+
+*返回最新一个“破坏性”操作之前*
+
+**“破坏性”操作指对JQ元素进行操作改变原有的结构**
+
+### 事件
+
+
 ***
 
 1.
 
 > $()
 
-$(fuck.a,fuck.b)是找不到的，Jquery中的语法是在第二个中找第一个，正确的写法是$(fuck.a+','fuck.b)用逗号分隔开
+$(fuck.a,fuck.b)是找不到的,Jquery中的语法是在第二个中找第一个,正确的写法是$(fuck.a+','fuck.b)用逗号分隔开
 
 2.
 
 > $().prototype
 
-在我们不熟悉Jquery的选择器后有什么功能的情况下，我们可以使用prototype去打印查看里面所封装好的功能
+在我们不熟悉Jquery的选择器后有什么功能的情况下,我们可以使用prototype去打印查看里面所封装好的功能
 
 
