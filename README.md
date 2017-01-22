@@ -15,24 +15,32 @@
 
 ### 关于近期更新内容
 
-> 自己的短板，不理解，不清楚的地方的总结，之后会更新上来
+> 太久没更新了。近期将更新这半年来遇到的坑，还有自己对坑的理解
 
-1.jquery API
 ***
 
 ### 正在持续更新中的插件
 
 **厚颜无耻求star**
 
-[幻灯片](https://github.com/Frosv/Slide.js)
+[简单幻灯片插件](https://frosv.github.io/RollMagic)
+
+重新整理插件代码，增加更多功能，正在考虑如何直接实例化
+
 [裁剪图片](https://github.com/Frosv/ClipImage.js)
+
+### 常用插件
+
+[懒加载](https://github.com/tuupola/jquery_lazyload)
+[placeholder](https://github.com/mathiasbynens/jquery-placeholder)
 
 ### 参考资料
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
+查看各种API，方便，实用
 
+[雅虎35条准则原版](https://developer.yahoo.com/performance/rules.html)
+[雅虎35条准则翻译](http://blog.csdn.net/magneto7/article/details/53140269)
 
-
-
-
+平时在写代码的时候需要多注意可以提高你页面打开的速度
