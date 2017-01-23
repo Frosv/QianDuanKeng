@@ -25,11 +25,23 @@
 
 **class -**
 
-在写HTML的class时，使用"-"分割名字，比如class="nav-box"
+在写HTML的class时，使用"-"分割名字
+
+```html
+
+<div class="nav-box"></div>
+
+```
 
 **id 驼峰式**
 
-在写HTML的id时，使用驼峰式命名，比如id="navBox"
+在写HTML的id时，使用驼峰式命名
+
+```html
+
+<div id="navBox"></div>
+
+```
 
 **变量 驼峰式**
 
