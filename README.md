@@ -19,6 +19,50 @@
 
 ***
 
+### 前端规范
+
+> 命名规范
+
+**class -**
+
+在写HTML的class时，使用"-"分割名字，比如class="nav-box"
+
+**id 驼峰式**
+
+在写HTML的id时，使用驼峰式命名，比如id="navBox"
+
+**变量 驼峰式**
+
+在JavaScript中，变量使用驼峰命名，比如
+
+```JavaScript
+
+var = navLength;
+
+```
+
+**变量对象 $**
+
+在JavaScript中，变量对象使用"$"开头
+
+```JavaScript
+
+var $el = $('html');
+
+```
+
+**私有变量 _**
+
+在JavaScript中，函数中的私有变量对象使用下划线开头
+
+```JavaScript
+
+var _this = $(this);
+
+```
+
+***
+
 ### 正在持续更新中的插件
 
 **厚颜无耻求star**
