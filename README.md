@@ -100,3 +100,5 @@ var _this = $(this);
 [雅虎35条准则翻译](http://blog.csdn.net/magneto7/article/details/53140269)
 
 平时在写代码的时候需要多注意可以提高你页面打开的速度
+
+[atom插件](http://blog.sina.com.cn/s/blog_5f162b830102x5pl.html)
