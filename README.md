@@ -125,6 +125,8 @@ console.log('ok')
 
 重新整理插件代码，增加更多功能，正在考虑如何直接实例化
 
+***
+
 ### 常用插件
 
 **自己看好API锻炼自己英文水平，不懂的划词翻译**
@@ -142,6 +144,8 @@ console.log('ok')
 [3D制作](https://github.com/mrdoob/three.js)
 
 [图标制作百度Echarts](https://github.com/ecomfe/echarts)
+
+***
 
 ### 参考资料
 
