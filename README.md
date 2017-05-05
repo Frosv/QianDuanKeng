@@ -111,7 +111,15 @@ var _this = $(this);
 
 ### 常用插件
 
+**自己看好API锻炼自己英文水平，不懂的划词翻译**
+
 [懒加载](https://github.com/tuupola/jquery_lazyload)
+[轮播图](https://github.com/kenwheeler/slick)
+[进度条](https://github.com/andreruffert/rangeslider.js)
+[富文本](https://github.com/summernote/summernote)
+[数据渲染](https://github.com/olado/doT)
+[3D制作](https://github.com/mrdoob/three.js)
+[图标制作百度Echarts](https://github.com/ecomfe/echarts)
 
 ### 参考资料
 
@@ -123,4 +131,8 @@ var _this = $(this);
 [雅虎35条准则翻译](http://blog.csdn.net/magneto7/article/details/53140269)
 
 平时在写代码的时候需要多注意可以提高你页面打开的速度
+
+[ECMAScript 6入门](https://github.com/ruanyf/es6tutorial)
+
+[免费的计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
 
