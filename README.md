@@ -15,7 +15,7 @@
 
 ### 关于近期更新内容
 
-> 太久没更新了。近期将更新这半年来遇到的坑，还有自己对坑的理解
+> 在准备机器学习以及公众号
 
 ***
 
@@ -73,6 +73,32 @@ var _this = $(this);
 
 ```
 
+**代码缩进**
+
+全部都使用2个空格作为缩进标准，每个编辑器不一样，但是空格都是一样的，所以请自行设置好
+
+**代码整理**
+
+每个编辑器都不一样，蛮出名的插件叫"Beautify"这个插件基本上蛮多编辑器都支持的都可以试试，大家在提交代码的时候都整理代码，这样方便别人打开浏览
+
+**注释**
+
+在HTML每个模块应写好注释，css也将按HTML的模块分注释，JavaScript也是一样，针对JavaScript如果功能复杂或者变量不在上下文请使用长条注释好，方便阅读
+
+``` HTML
+
+<!-- nav -->
+<div class="nav-box"></div>
+<!-- nav end -->
+
+```
+
+``` CSS
+.nav-box{
+  color: #fff;
+}
+```
+
 ***
 
 ### 正在持续更新中的插件
@@ -83,12 +109,9 @@ var _this = $(this);
 
 重新整理插件代码，增加更多功能，正在考虑如何直接实例化
 
-[裁剪图片](https://github.com/Frosv/ClipImage.js)
-
 ### 常用插件
 
 [懒加载](https://github.com/tuupola/jquery_lazyload)
-[placeholder](https://github.com/mathiasbynens/jquery-placeholder)
 
 ### 参考资料
 
@@ -101,4 +124,3 @@ var _this = $(this);
 
 平时在写代码的时候需要多注意可以提高你页面打开的速度
 
-[atom插件](http://blog.sina.com.cn/s/blog_5f162b830102x5pl.html)
