@@ -143,7 +143,13 @@ console.log('ok')
 
 [3D制作](https://github.com/mrdoob/three.js)
 
-[图标制作百度Echarts](https://github.com/ecomfe/echarts)
+[图表制作百度Echarts](https://github.com/ecomfe/echarts)
+
+[图片压缩](https://tinypng.com/)
+
+[图片base64转换](https://c.runoob.com/front-end/59)
+
+[正则表达式在线测试](http://tool.chinaz.com/regex/)
 
 ***
 
@@ -162,4 +168,7 @@ console.log('ok')
 [ECMAScript 6入门](https://github.com/ruanyf/es6tutorial)
 
 [免费的计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+
+[浏览器原理](http://kb.cnblogs.com/page/129756/)
+
 
