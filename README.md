@@ -88,7 +88,9 @@ var _this = $(this);
 ``` HTML
 
 <!-- nav -->
+
 <div class="nav-box"></div>
+
 <!-- nav end -->
 
 ```
@@ -100,6 +102,16 @@ var _this = $(this);
   color: #fff;
 }
 /* nav end*/
+
+```
+
+``` JavaScript
+
+//nav
+
+console.log('ok')
+
+//nav end
 
 ```
 
