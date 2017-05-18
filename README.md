@@ -1,8 +1,6 @@
 # FuckWebBUG
 **看名字，懂意思**
 
-*我是要成为前端开发的相关知识用简单的绅士的语言让来看的人一看就理解的男人！by《海贼王》*
-
 本文会将HTML，CSS，JavaScript中遇到的问题整理出来，每个标签、样式、API都会整理到一起，使用的时候搜索标签、样式、API就能找到相关的问题
 
 > 学会拥抱失败，期待失败，接受失败，并准备直面失败。————by《Soft Skills》
@@ -22,6 +20,28 @@
 ### 前端规范
 
 > 命名规范
+
+**取名**
+
+直接百度翻译吧！
+
+**语义化**
+
+针对每个布局请进行语义化的规范
+
+```html
+
+<!-- 导航栏 -->
+<nav></nav>
+
+<!-- 文字用p  -->
+<p>nihao</p>
+
+<!-- 底部 -->
+<footer></footer>
+
+```
+
 
 **class -**
 
@@ -69,7 +89,7 @@ var $el = $('html');
 
 ```JavaScript
 
-var _this = $(this);
+var _this = $(this).val();
 
 ```
 
@@ -83,7 +103,7 @@ var _this = $(this);
 
 **注释**
 
-在HTML每个模块应写好注释，css也将按HTML的模块分注释，JavaScript也是一样，针对JavaScript如果功能复杂或者变量不在上下文请使用长条注释好，方便阅读
+在HTML每个模块应写好注释，CSS也将按HTML的模块分注释，JavaScript也是一样，针对JavaScript如果功能复杂或者变量不在上下文请使用长条注释好，方便阅读
 
 ``` HTML
 
@@ -101,6 +121,7 @@ var _this = $(this);
 .nav-box{
   color: #fff;
 }
+
 /* nav end*/
 
 ```
@@ -117,17 +138,7 @@ console.log('ok')
 
 ***
 
-### 正在持续更新中的插件
-
-**厚颜无耻求star**
-
-[简单幻灯片插件](https://frosv.github.io/RollMagic)
-
-重新整理插件代码，增加更多功能，正在考虑如何直接实例化
-
-***
-
-### 常用插件
+### 常用前端工具/库
 
 **自己看好API锻炼自己英文水平，不懂的划词翻译**
 
@@ -150,6 +161,13 @@ console.log('ok')
 [图片base64转换](https://c.runoob.com/front-end/59)
 
 [正则表达式在线测试](http://tool.chinaz.com/regex/)
+
+本地简单服务器(nodejs)
+
+npm i anywhere -g
+anywhere 端口号(默认8000)
+
+本地服务器的作用是可以跑起服务，然后可以在本地做ajax请求json文件测试
 
 ***
 
