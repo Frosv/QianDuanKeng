@@ -1,5 +1,59 @@
 ### Jquery
 
+### 速度对比结果
+
+```javascript
+
+console.log($('.img-title').length);
+
+console.time();
+$('p.img-title');
+console.timeEnd();
+
+console.time();
+$('p .img-title');
+console.timeEnd();
+
+console.time();
+$('.img-title');
+console.timeEnd();
+
+
+// 9
+// default: 0.093ms(选择p中的class)
+// default: 0.047ms(选择class上方的p)
+// default: 0.027ms(最快)
+
+console.log($('li').length);
+
+console.time();
+document.getElementsByTagName('li');
+console.timeEnd();
+
+console.time();
+$('li');
+console.timeEnd();
+
+// 75
+// default: 0.025ms
+// default: 0.151ms
+
+console.log($('li').length);
+
+console.time();
+//document.getElementsByTagName('li');
+console.timeEnd();
+
+console.time();
+$('li');
+console.timeEnd();
+
+// 75
+// default: 0.014ms
+// default: 0.138ms
+
+```
+
 针对JavaScript的api加上自己对其的理解,斜体为*用途*,粗体是**理解**
 
 ### 核心

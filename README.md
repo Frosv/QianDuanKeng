@@ -189,4 +189,5 @@ anywhere 端口号(默认8000)
 
 [浏览器原理](http://kb.cnblogs.com/page/129756/)
 
+[谷歌浏览器network](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading#view-network-timing-details-for-a-specific-resource)  **翻一翻**
 
