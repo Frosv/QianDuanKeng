@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <!--鼠标移动显示-->
+  <div id="app">
+    <p v-on:mouseenter="hover" v-on:mouseleave="hoverOver">{{message}}</p>
+    <ul v-show="false | flag">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+
+  <!--v-if-->
+  <div id="app2">
+    <h1>Hello, Vue.js!</h1>
+    <h1 v-if="yes">Yes!</h1>
+    <h1 v-if="yes">fuck</h1>
+    <h1 v-show="yes">fuck</h1>
+    <h1 v-if="no">No!</h1>
+    <h1 v-if="age >= 25">Age: {{ age }}</h1>
+    <h1 v-if="name.indexOf('jack') >= 0">Name: {{ name }}</h1>
+    <h1 v-else>aaa</h1>
+  </div>
+
+  <!--v-for-->
+  <div id="app3">
+    <div v-for="person in people">
+      <p>{{person.name}}</p>
+      <p>{{person.age}}</p>
+    </div>
+  </div>
+
+  <!--demo-->
+  <div id="demo">
+    <p>名字：<input type="text" v-model="person.name"></p>
+    <p>年龄：<input type="text" v-model="person.age"></p>
+    <p>性别：<input type="text" v-model="person.sex"></p>
+    <button type="button" v-on:click="createPerson">添加</button>
+    <table border="1">
+      <tr>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+      </tr>
+      <tr v-for="p in people">
+        <td>{{p.name}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.sex}}</td>
+        <td>
+          <button type="button" @click="delPerson($index)">删除</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!--<script src="../js/jquery-3.2.1.min.js"></script>-->
+  <script src="./index.js"></script>
+</body>
+
+</html>
