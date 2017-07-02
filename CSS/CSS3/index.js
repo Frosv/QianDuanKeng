@@ -10,26 +10,44 @@ $('#btn1').addEventListener('click', function (e) {
 
 // 放大
 
-$('#rangeX1').addEventListener('input', function (e) {
-  var Xval = $('#rangeX1').value;
-  var Yval = $('#rangeY1').value;
+$('#rangeX').addEventListener('input', function (e) {
+  var Xval = $('#rangeX').value;
+  var Yval = $('#rangeY').value;
   $('#box2').style.transform = 'matrix(' + Xval + ',0,0,' + Yval + ',0,0)';
-  $('#inputTextX1').innerHTML = Xval;
+  $('#inputTextX').innerHTML = Xval;
 });
 
-$('#rangeY1').addEventListener('input', function (e) {
-  var Xval = $('#rangeX1').value;
-  var Yval = $('#rangeY1').value;
+$('#rangeY').addEventListener('input', function (e) {
+  var Xval = $('#rangeX').value;
+  var Yval = $('#rangeY').value;
   $('#box2').style.transform = 'matrix(' + Xval + ',0,0,' + Yval + ',0,0)';
-  $('#inputTextY1').innerHTML = Yval;
+  $('#inputTextY').innerHTML = Yval;
 });
 
 //旋转
 
-$('#rangeRotate1').addEventListener('input', function (e) {
+$('#rangeRotate').addEventListener('input', function (e) {
   var cosVal = Math.cos(this.value * Math.PI / 180),
     sinVal = Math.sin(this.value * Math.PI / 180);
   var valTransform = 'matrix(' + cosVal.toFixed(6) + ',' + sinVal.toFixed(6) + ',' + (-1 * sinVal).toFixed(6) + ',' + cosVal.toFixed(6) + ',0,0)';
   $('#box3').style.transform = valTransform;
-  $('#inputRotate1').innerHTML = this.value;
+  $('#inputRotate').innerHTML = this.value;
+});
+
+//拉伸
+
+$('#rangeSkewX').addEventListener('input', function (e) {
+  var tanValY = Math.tan($('#rangeSkewX').value * Math.PI / 180),
+    tanValX = Math.tan($('#rangeSkewY').value * Math.PI / 180);
+  var valTransform = 'matrix(1,' + tanValY.toFixed(6) + ',' + tanValX.toFixed(6) + ',1,0,0)';
+  $('#box4').style.transform = valTransform;
+  $('#inputSkewX').innerHTML = this.value;
+});
+
+$('#rangeSkewY').addEventListener('input', function (e) {
+  var tanValY = Math.tan($('#rangeSkewX').value * Math.PI / 180),
+    tanValX = Math.tan($('#rangeSkewY').value * Math.PI / 180);
+  var valTransform = 'matrix(1,' + tanValY.toFixed(6) + ',' + tanValX.toFixed(6) + ',1,0,0)';
+  $('#box4').style.transform = valTransform;
+  $('#inputSkewY').innerHTML = this.value;
 });

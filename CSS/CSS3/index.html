@@ -19,10 +19,10 @@
   <!--放大-->
   <div id="demo2">
     <p>
-      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeX1">X轴放大比例：<span id="inputTextX1">1</span>
+      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeX">X轴放大比例：<span id="inputTextX">1</span>
     </p>
     <p>
-      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeY1">X轴放大比例：<span id="inputTextY1">1</span>
+      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeY">X轴放大比例：<span id="inputTextY">1</span>
     </p>
     <div class="box2" id="box2"></div>
   </div>
@@ -30,9 +30,20 @@
   <!--旋转-->
   <div id="demo3">
     <p>
-      <input type="range" value="0" max="360" step="0.1" id="rangeRotate1">旋转角度：<span id="inputRotate1">1</span>
+      <input type="range" value="0" max="360" step="0.1" id="rangeRotate">旋转角度：<span id="inputRotate">1</span>
     </p>
     <div class="box3" id="box3">▲</div>
+  </div>
+
+  <!--拉伸-->
+  <div id="demo4">
+    <p>
+      <input type="range" value="0" max="89" step="0.1" id="rangeSkewX">X轴倾斜角度：<span id="inputSkewX">1</span>
+    </p>
+    <p>
+      <input type="range" value="0" max="89" step="0.1" id="rangeSkewY">Y轴倾斜角度：<span id="inputSkewY">1</span>
+    </p>
+    <div class="box4" id="box4"></div>
   </div>
   <script src="./index.js"></script>
 </body>

@@ -29,3 +29,15 @@ div {
   text-align: center;
   font-size: 26px;
 }
+
+.box4 {
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  transform-origin: top left;
+  background-color: #fea;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  font-size: 26px;
+}
