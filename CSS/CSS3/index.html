@@ -10,12 +10,30 @@
 </head>
 
 <body>
-  <!--matrix(1,0,0,1,30,30)-->
+  <!--位移-->
   <div id="demo1">
     <div class="box1" id="box1"></div>
     <p><button type="button" id="btn1">转换matrix(1,0,0,1,30,30)</button></p>
   </div>
 
+  <!--放大-->
+  <div id="demo2">
+    <p>
+      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeX1">X轴放大比例：<span id="inputTextX1">1</span>
+    </p>
+    <p>
+      <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeY1">X轴放大比例：<span id="inputTextY1">1</span>
+    </p>
+    <div class="box2" id="box2"></div>
+  </div>
+
+  <!--旋转-->
+  <div id="demo3">
+    <p>
+      <input type="range" value="0" max="360" step="0.1" id="rangeRotate1">旋转角度：<span id="inputRotate1">1</span>
+    </p>
+    <div class="box3" id="box3">▲</div>
+  </div>
   <script src="./index.js"></script>
 </body>
 

@@ -1,5 +1,31 @@
-.box1{
+div {
+  padding: 10px;
+}
+
+.box1 {
   background-color: #ffc012;
   width: 100px;
   height: 100px;
+  transition: all 1s;
+}
+
+.box2 {
+  background-color: #231faf;
+  width: 100px;
+  height: 100px;
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  transform-origin: top left;
+  margin-top: 20px;
+  transition: all 1s;
+}
+
+.box3 {
+  background-color: #bec;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 26px;
 }
