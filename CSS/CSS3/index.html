@@ -11,12 +11,14 @@
 
 <body>
   <!--位移-->
+  <h3>位移</h3>
   <div id="demo1">
     <div class="box1" id="box1"></div>
     <p><button type="button" id="btn1">转换matrix(1,0,0,1,30,30)</button></p>
   </div>
 
   <!--放大-->
+  <h3>放大</h3>
   <div id="demo2">
     <p>
       <input type="range" name="" value="1" min="1" max="4" step="0.1" id="rangeX">X轴放大比例：<span id="inputTextX">1</span>
@@ -28,6 +30,7 @@
   </div>
 
   <!--旋转-->
+  <h3>旋转</h3>
   <div id="demo3">
     <p>
       <input type="range" value="0" max="360" step="0.1" id="rangeRotate">旋转角度：<span id="inputRotate">1</span>
@@ -36,6 +39,7 @@
   </div>
 
   <!--拉伸-->
+  <h3>拉伸</h3>
   <div id="demo4">
     <p>
       <input type="range" value="0" max="89" step="0.1" id="rangeSkewX">X轴倾斜角度：<span id="inputSkewX">1</span>
@@ -45,6 +49,41 @@
     </p>
     <div class="box4" id="box4"></div>
   </div>
+
+  <!--3D x轴-->
+  <h3>3D x轴</h3>
+  <div id="demo5">
+    <p>
+      <input type="range" value="0" max="90" step="0.1" id="Rotate3dX">旋转角度：<span id="input3DRotateX">0</span>
+    </p>
+    <div class="box-border">
+      <div class="box5" id="box5">w</div>
+    </div>
+  </div>
+
+  <!--3D y轴-->
+  <h3>3D y轴</h3>
+  <div id="demo6">
+    <p>
+      <input type="range" value="0" max="90" step="0.1" id="Rotate3dY">旋转角度：<span id="input3DRotateY">0</span>
+    </p>
+    <div class="box-border">
+      <div class="box6" id="box6">w</div>
+    </div>
+  </div>
+
+  <!--3D z轴-->
+  <h3>3D z轴</h3>
+  <div id="demo6">
+    <p>
+      <input type="range" value="0" max="90" step="0.1" id="Rotate3dZ">旋转角度：<span id="input3DRotateZ">0</span>
+    </p>
+    <div class="box-border">
+      <div class="box7" id="box7">w</div>
+    </div>
+  </div>
+
+  <!--3D透视-->
   <script src="./index.js"></script>
 </body>
 

@@ -1,6 +1,23 @@
+//快捷选择
 var $ = function (selector) {
   return document.querySelector(selector);
 };
+
+//随机颜色
+
+function randomColor(el) {
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  $(el).style.backgroundColor = "rgb(" + r + ',' + g + ',' + b + ")";
+}
+randomColor('#box1');
+randomColor('#box2');
+randomColor('#box3');
+randomColor('#box4');
+randomColor('#box5');
+randomColor('#box6');
+randomColor('#box7');
 
 // 位移
 
@@ -51,3 +68,28 @@ $('#rangeSkewY').addEventListener('input', function (e) {
   $('#box4').style.transform = valTransform;
   $('#inputSkewY').innerHTML = this.value;
 });
+
+// 3D x轴
+
+$('#Rotate3dX').addEventListener('input',function(e){
+  var rotateX = this.value;
+  $('#box5').style.transform = 'rotateX('+rotateX+'deg)';
+  $('#input3DRotateX').innerHTML = this.value;
+});
+
+// 3D y轴
+
+$('#Rotate3dY').addEventListener('input',function(e){
+  var rotateX = this.value;
+  $('#box6').style.transform = 'rotateY('+rotateX+'deg)';
+  $('#input3DRotateY').innerHTML = this.value;
+});
+
+// 3D z轴
+
+$('#Rotate3dZ').addEventListener('input',function(e){
+  var rotateX = this.value;
+  $('#box7').style.transform = 'rotateZ('+rotateX+'deg)';
+  $('#input3DRotateZ').innerHTML = this.value;
+});
+
