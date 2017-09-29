@@ -192,3 +192,65 @@ anywhere 端口号(默认8000)
 [测试代码速度](http://jsben.ch/#/index)
 
 [谷歌浏览器network](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading#view-network-timing-details-for-a-specific-resource)  **翻一翻**
+
+### 代码检测工具 Eslint
+
+npm i -g eslint 
+npm init 
+eslint init
+
+package.json设置
+
+"devDependencies": {
+  "eslint": "^4.6.1"
+}
+
+vscode 设置
+
+"editor.formatOnSave": true,
+"eslint.autoFixOnSave": true,
+"files.eol": "\n"
+
+.eslintrc.js设置
+
+module.exports = {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "root": true,
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-console": "off",
+    "no-use-before-define": ["error", {
+      variables: false
+    }],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+};
