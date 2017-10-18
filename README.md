@@ -195,6 +195,10 @@ anywhere 端口号(默认8000)
 
 ### 代码检测工具 Eslint
 
+这里提供的是针对vscode的，因为vscode可以自带自动修补这些问题，而且当然配置是一个简单的基础配置
+
+[eslint官网](https://eslint.cn/)
+
 npm i -g eslint 
 npm init 
 eslint init
@@ -211,46 +215,44 @@ vscode 设置
 "eslint.autoFixOnSave": true,
 "files.eol": "\n"
 
-.eslintrc.js设置
+.eslintrc.js设置(放在工程文件夹根目录里或者用eslint --init初始化一个)
 
 module.exports = {
-  "env": {
+  "env": { //配置适用环境，根据个人情况修改
     "browser": true,
-    "es6": true,
-    "jquery": true
+    "es6": true, //开启ES6
+    "jquery": true, //开启JQ
+    'node': true, //开启node
   },
-  "root": true,
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
-  "rules": {
-    "indent": [
+  "root": true, //根目录检测eslintrc配置文件
+  "extends": "eslint:recommended", //开启默认配置
+  "rules": { //eslint规则
+    "indent": [ //强制使用一致的缩进“空格”
       "error",
       2
     ],
-    "arrow-parens": [
-      "error",
-      "always"
-    ],
-    "linebreak-style": [
+    "semi": ["error", "always"], //分号
+    "no-multiple-empty-lines": ["error", { //多余空行
+      "max": 1
+    }],
+    "radix": "error", //强制在parseInt()使用基数参数
+    "linebreak-style": [ //强制使用一致的换行风格
       "error",
       "unix"
     ],
-    "no-console": "off",
-    "no-use-before-define": ["error", {
-      variables: false
-    }],
-    "quotes": [
+    "max-len": [1, 80], //一行最大长度
+    "no-console": "off", //开启console
+    "no-use-before-define": [ //禁止在变量定义之前使用它们
+      "error", {
+        variables: false
+      }
+    ],
+    "quotes": [ //强制使用一致的反勾号、双引号或单引号
       "error",
       "single"
     ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "eqeqeq": ["error", "always"], //判断都用===或者 !==
+    "no-debugger": "off", //开启debugger调试
+    "no-mixed-spaces-and-tabs": "error" //禁止空格和 tab 的混合缩进
   }
 };
